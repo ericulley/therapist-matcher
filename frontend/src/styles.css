@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Sets the REM size */
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+button {
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+a {
+    color: #000000;
+}
+
+/* Nav styles */
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding: 2rem 5rem;
+    background-color: black;
+    color: white;
+}
+
+#nav-bar-logo > img {
+    width: 15rem;
+}
+
+.nav-label {
+    font-family: 'Futura PT', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 1em;
+}
+
+#page-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* Main and Section styles */
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 5rem;
+}
+
+/* Form */
+.question-group {
+    margin-bottom: 2rem;
+}
+
+.question-text {
+    font-size: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e9ecef;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-label,
+.radio-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.checkbox-label input,
+.radio-label input {
+    margin-right: 0.5rem;
+    width: auto;
+}
+
+#submit-btn {
+    background: #3498db;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background: #2980b9;
+}
+
+.response-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.response-message.hidden {
+    display: none;
+}
+
+.response-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.response-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.recommendation-card {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recommendation-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.therapist-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.therapist-info h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.match-score {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.reasoning-section,
+.next-steps-section {
+    margin-bottom: 1.5rem;
+}
+
+.reasoning-section h5,
+.next-steps-section h5 {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.reasoning-section p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.next-steps-section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.next-steps-section li {
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Confirmation Overview Styles */
+.confirmation-overview {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.confirmation-section {
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-section h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 0.25rem;
+}
+
+.confirmation-item {
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+    background: white;
+    border-radius: 4px;
+    border-left: 3px solid grey;
+}
+
+.confirmation-item span {
+    /* display: block; */
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+}
