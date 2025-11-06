@@ -6,22 +6,26 @@
 
 html {
     font-size: 16px; /* Sets the REM size */
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #e8e9eb 0%, #f5f6f7 50%, #e0e1e3 100%);
+    min-height: 100vh;
 }
 
 h1 {
-    color: #2c3e50;
+    color: #1a1a1a;
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 h2 {
-    color: #34495e;
+    color: #2a2a2a;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: 400;
+    letter-spacing: -0.3px;
 }
 
 button {
@@ -29,11 +33,25 @@ button {
     width: 10rem;
     font-size: 1.1rem;
     text-align: center;
-    background-color: #555;
+    background: rgba(85, 85, 85, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     color: white;
-    border: none;
-    border-radius: 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1rem;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: rgba(70, 70, 70, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 a {
@@ -81,8 +99,21 @@ nav {
 /* Main and Section styles */
 main {
     width: 80%;
+    max-width: 900px;
     margin: 0 auto;
     padding: 3rem 5rem;
+}
+
+.page {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+                0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
 }
 
 /* Form */
@@ -96,9 +127,10 @@ main {
 
 label {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #34495e;
+    color: #2a2a2a;
+    letter-spacing: -0.2px;
 }
 
 input[type="text"],
@@ -107,10 +139,15 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
-    padding: 0.75rem;
-    border: 2px solid #e9ecef;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(200, 200, 200, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    color: #1a1a1a;
 }
 
 input[type="text"]:focus,
@@ -119,15 +156,18 @@ input[type="tel"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #3498db;
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(100, 100, 100, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
 }
 
 .checkbox-group,
 .radio-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
 }
 
 .checkbox-label,
@@ -136,30 +176,51 @@ textarea:focus {
     align-items: center;
     font-weight: normal;
     margin-bottom: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    border-radius: 10px;
     cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-label:hover,
+.radio-label:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(150, 150, 150, 0.3);
+    transform: translateX(2px);
 }
 
 .checkbox-label input,
 .radio-label input {
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
     width: auto;
+    cursor: pointer;
 }
 
 #submit-btn {
-    background: #3498db;
+    background: rgba(70, 70, 70, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     color: white;
-    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #submit-btn:hover {
-    background: #2980b9;
+    background: rgba(50, 50, 50, 0.85);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .response-message {
     margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 4px;
+    padding: 2rem;
+    border-radius: 20px;
     text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .response-message.hidden {
@@ -167,15 +228,17 @@ textarea:focus {
 }
 
 .response-message.success {
-    background: #d4edda;
+    background: rgba(212, 237, 218, 0.7);
     color: #155724;
-    border: 1px solid #c3e6cb;
+    border: 1px solid rgba(195, 230, 203, 0.5);
+    box-shadow: 0 4px 20px rgba(21, 87, 36, 0.1);
 }
 
 .response-message.error {
-    background: #f8d7da;
+    background: rgba(248, 215, 218, 0.7);
     color: #721c24;
-    border: 1px solid #f5c6cb;
+    border: 1px solid rgba(245, 198, 203, 0.5);
+    box-shadow: 0 4px 20px rgba(114, 28, 36, 0.1);
 }
 
 .recommendation-card {
@@ -185,28 +248,36 @@ textarea:focus {
 }
 
 .recommendation-card h3 {
-    color: #2c3e50;
+    color: #1a1a1a;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
     text-align: center;
+    letter-spacing: -0.3px;
 }
 
 .therapist-info {
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 1.5rem;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 16px;
     margin-bottom: 1.5rem;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .therapist-info h4 {
-    color: #2c3e50;
+    color: #1a1a1a;
     font-size: 1.3rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
 }
 
 .match-score {
-    color: #27ae60;
+    color: #2a2a2a;
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -214,18 +285,25 @@ textarea:focus {
 .reasoning-section,
 .next-steps-section {
     margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    border-radius: 14px;
 }
 
 .reasoning-section h5,
 .next-steps-section h5 {
-    color: #34495e;
+    color: #1a1a1a;
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 600;
+    letter-spacing: -0.2px;
 }
 
 .reasoning-section p {
-    color: #555;
+    color: #3a3a3a;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -236,42 +314,154 @@ textarea:focus {
 }
 
 .next-steps-section li {
-    color: #555;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    color: #3a3a3a;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
 }
 
 /* Confirmation Overview Styles */
 .confirmation-overview {
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1rem 0;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 18px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .confirmation-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .confirmation-section h3 {
-    color: #2c3e50;
+    color: #1a1a1a;
     font-size: 1.1rem;
     font-weight: 600;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
+    letter-spacing: -0.2px;
 }
 
 .confirmation-item {
-    margin-bottom: 0.5rem;
-    padding: 0.25rem;
-    background: white;
-    border-radius: 4px;
-    border-left: 3px solid grey;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(180, 180, 180, 0.2);
+    border-left: 3px solid rgba(100, 100, 100, 0.4);
+    transition: all 0.2s ease;
 }
 
-.confirmation-item span {
-    /* display: block; */
-    color: #555;
-    line-height: 1.4;
+.confirmation-item:hover {
+    background: rgba(255, 255, 255, 0.65);
+    border-left-color: rgba(70, 70, 70, 0.5);
+}
+
+.confirmation-item span,
+.confirmation-item p {
+    color: #3a3a3a;
+    line-height: 1.5;
     margin-bottom: 0.25rem;
+}
+
+/* Range Slider Styles */
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: rgba(200, 200, 200, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    outline: none;
+    -webkit-appearance: none;
+    margin: 1rem 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: rgba(70, 70, 70, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: rgba(50, 50, 50, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: rgba(70, 70, 70, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: rgba(50, 50, 50, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Page Transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+    .page {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        width: 8rem;
+        height: 2.75rem;
+        font-size: 1rem;
+    }
 }
