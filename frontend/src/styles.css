@@ -377,6 +377,7 @@ input[type="range"] {
     border-radius: 12px;
     outline: none;
     -webkit-appearance: none;
+    appearance: none;
     margin: 1rem 0;
 }
 
