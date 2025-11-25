@@ -36,8 +36,8 @@ button {
     background: rgba(85, 85, 85, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgb(255, 255, 255);
+    border: 0px solid rgba(255, 255, 255, 0.18);
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -143,11 +143,12 @@ textarea {
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(200, 200, 200, 0.3);
+    border: .5px solid rgb(0, 0, 0);
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 1rem;
-    color: #1a1a1a;
+    color: #736868;
+    font-family: 'Futura PT'; 
 }
 
 input[type="text"]:focus,
@@ -165,9 +166,11 @@ textarea:focus {
 .checkbox-group,
 .radio-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
     gap: 0.75rem;
     margin-top: 0.75rem;
+    width: 50%;
 }
 
 .checkbox-label,

@@ -23,21 +23,17 @@
                 <section x-show="page === 1" class="page">
                     <h1>Lets get started</h1>
                     <div class="question-group">
-                        <label for="name" class="question-text">What is your full name?</label>
-                        <input x-model="form.name" type="text" id="name" name="name">
+                        <input x-model="form.name" type="text" id="name" name="name" placeholder="Name">
                     </div>
                     <div class="question-group">
-                        <label for="email" class="question-text">What is your email address?</label>
-                        <input x-model="form.email" type="email" id="email" name="email">
+                        <input x-model="form.email" type="email" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="question-group">
-                        <label for="phone" class="question-text">What is your phone number?</label>
-                        <input x-model="form.phone" type="tel" id="phone" name="phone">
+                        <input x-model="form.phone" type="tel" id="phone" name="phone" placeholder="Phone Number">
                     </div>
                     <div class="question-group">
-                        <label for="message" class="question-text">Are you located near either of our offices?</label>
                         <select x-model="form.location" id="location" name="location">
-                            <option value="" label="-- Select Location --" disabled />
+                            <option value="" label="Which location are you inquiring about?" disabled />
                             <option value="dc">Washington, D.C.</option>
                             <option value="slc">Salt Lake City, Utah</option>
                         </select>    
