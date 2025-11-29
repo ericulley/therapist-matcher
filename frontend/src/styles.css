@@ -47,7 +47,7 @@ button {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     color: rgb(255, 255, 255);
-    border: 0px solid rgba(255, 255, 255, 0.18);
+    border: 0px;
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -166,8 +166,7 @@ textarea:focus {
 .checkbox-group,
 .radio-group {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    flex-direction: column;
     gap: 0.75rem;
     margin-top: 0.75rem;
     width: 50%;
