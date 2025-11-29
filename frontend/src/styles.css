@@ -5,10 +5,19 @@
 }
 
 html {
-    font-size: 16px; /* Sets the REM size */
+    font-size: 14px; /* Sets the REM size */
     background: linear-gradient(135deg, #e8e9eb 0%, #f5f6f7 50%, #e0e1e3 100%);
     min-height: 100vh;
 }
+
+body {
+  background-image: url("./assets/page-bg.jpg");
+  background-size: cover;       
+  background-repeat: no-repeat; 
+  background-position: center;  
+  font-family: "futura-pt", sans-serif;
+}
+
 
 h1 {
     color: #1a1a1a;
@@ -17,6 +26,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: -0.5px;
+    font-family: "futura-pt", sans-serif;
 }
 
 h2 {
@@ -36,8 +46,8 @@ button {
     background: rgba(85, 85, 85, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgb(255, 255, 255);
+    border: 0px;
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,14 +115,8 @@ main {
 }
 
 .page {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 24px;
+    background: transparent;
     padding: 3rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
-                0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
 }
 
@@ -140,14 +144,13 @@ select,
 textarea {
     width: 100%;
     padding: 0.85rem 1rem;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(200, 200, 200, 0.3);
+    border: .5px solid rgb(0, 0, 0);
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 1rem;
-    color: #1a1a1a;
+    color: #736868;
+    font-family: 'Futura PT'; 
+    background: transparent;
 }
 
 input[type="text"]:focus,
@@ -156,9 +159,7 @@ input[type="tel"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    background: rgba(255, 255, 255, 0.7);
     border-color: rgba(100, 100, 100, 0.4);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transform: translateY(-1px);
 }
 
@@ -168,6 +169,7 @@ textarea:focus {
     flex-direction: column;
     gap: 0.75rem;
     margin-top: 0.75rem;
+    width: 50%;
 }
 
 .checkbox-label,
@@ -177,18 +179,17 @@ textarea:focus {
     font-weight: normal;
     margin-bottom: 0;
     padding: 0.75rem 1rem;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(200, 200, 200, 0.2);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
 }
 
 .checkbox-label:hover,
 .radio-label:hover {
-    background: rgba(255, 255, 255, 0.6);
+    /* background: rgba(255, 255, 255, 0.6); */
+    background: transparent;
     border-color: rgba(150, 150, 150, 0.3);
     transform: translateX(2px);
 }
