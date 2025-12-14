@@ -42,20 +42,15 @@ button {
   width: 10rem;
   font-size: 1.1rem;
   text-align: center;
-  background: rgba(85, 85, 85, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  color: rgb(255, 255, 255);
+  background: transparent;
+  color: #736868;
   border: 0px;
-  border-radius: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: #736868 1px solid;
 }
 
 button:hover {
-  background: rgba(70, 70, 70, 0.8);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
