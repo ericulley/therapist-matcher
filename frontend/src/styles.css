@@ -126,7 +126,7 @@ label {
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #2a2a2a;
+  color: #736868;
   letter-spacing: -0.2px;
 }
 
@@ -158,11 +158,10 @@ textarea:focus {
 
 .checkbox-group,
 .radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
   margin-top: 0.75rem;
-  width: 50%;
 }
 
 .checkbox-label,
@@ -172,7 +171,7 @@ textarea:focus {
   font-weight: normal;
   margin-bottom: 0;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(200, 200, 200, 0.2);
+  border: 1px solid rgba(150, 150, 150, 0.3);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -181,9 +180,8 @@ textarea:focus {
 
 .checkbox-label:hover,
 .radio-label:hover {
-  /* background: rgba(255, 255, 255, 0.6); */
   background: transparent;
-  border-color: rgba(150, 150, 150, 0.3);
+  border-color: #736868;
   transform: translateX(2px);
 }
 
