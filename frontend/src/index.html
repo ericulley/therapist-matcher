@@ -299,7 +299,9 @@
           </div>
         </section>
         <!-- Page 7: Match Results -->
-        <section x-show="page === 7" class="page"></section>
+        <section x-show="page === 7" class="page">
+          <div id="response-message" class="response-message hidden"></div>
+        </section>
         <!-- Page Navigation -->
         <div id="page-nav">
           <button x-show="page < 7" x-on:click="prevPage" type="button">Prev</button>

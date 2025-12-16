@@ -138,12 +138,12 @@ document.addEventListener("alpine:init", () => {
           console.log("Response from lambda:", result);
           const recommendation = result.therapistRecommendation;
           if (recommendation) {
-            this.page = 4;
             responseDiv.innerHTML = successMessage(recommendation);
           } else {
             responseDiv.textContent = "Recommendation received but format was unexpected.";
           }
           responseDiv.className = "response-message success";
+          this.page = 7;
         } catch (error) {
           if (error instanceof Error) {
             console.error("Error submitting questionnaire:", error);
@@ -153,6 +153,7 @@ document.addEventListener("alpine:init", () => {
             responseDiv.textContent = `There was an error submitting your questionnaire: ${error}. Please try again or contact support.`;
           }
           responseDiv.className = "response-message error";
+          this.page = 7;
         }
       },
     };
