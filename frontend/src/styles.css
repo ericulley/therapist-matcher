@@ -201,6 +201,7 @@ textarea:focus {
   width: 16px;
   height: 16px;
   border-radius: 4px;
+  border: 1px solid rgba(150, 150, 150, 0.3);
 }
 
 /* Radio circle */
@@ -208,6 +209,7 @@ textarea:focus {
   width: 16px;
   height: 16px;
   border-radius: 50%;
+  border: 1px solid rgba(150, 150, 150, 0.3);
 }
 .checkbox-label input:checked::after {
   content: "✓";
