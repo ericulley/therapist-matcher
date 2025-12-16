@@ -191,8 +191,41 @@ textarea:focus {
   margin-right: 0.75rem;
   width: auto;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* Checkbox square  */
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
 }
 
+/* Radio circle */
+.radio-label input {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.checkbox-label input:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  line-height: 16px;
+}
+.radio-label input:checked::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 3px auto;
+  border-radius: 50%;
+  background: white;
+}
 
 .response-message {
   margin-top: 1rem;
