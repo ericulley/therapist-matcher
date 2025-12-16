@@ -201,8 +201,8 @@ textarea:focus {
 }
 
 #submit-btn:hover {
-  background: rgba(50, 50, 50, 0.85);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  transform: translateX(2px);
 }
 
 .response-message {
