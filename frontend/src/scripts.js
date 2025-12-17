@@ -5,7 +5,7 @@ const API_GATEWAY_URL = "https://81bnq1ing6.execute-api.us-west-2.amazonaws.com/
 // Success Message Template
 const successMessage = (recommendation) => {
   return `<div class="recommendation-card">
-        <h3>🎯 Your Therapist Match</h3>
+        <h3>Your Therapist Match</h3>
         <div class="therapist-info">
         <h4>${recommendation.therapistName}</h4>
         <div class="match-score">Match Score: ${recommendation.matchScore}%</div>
