@@ -1,4 +1,5 @@
 const { BedrockRuntimeClient, InvokeModelCommand } = require('@aws-sdk/client-bedrock-runtime');
+const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
 
@@ -18,6 +19,66 @@ const loadTherapistProfiles = () => {
     } catch (error) {
         console.error('Error loading therapist profiles:', error);
         return 'Error loading therapist profiles';
+    }
+}
+
+/**
+ * @typedef {Object} UserData
+ * @property {string} name - Client's full name
+ * @property {string} email - Client's email address
+ * @property {string} phone - Client's phone number
+ * @property {string} location - Client's location
+ */
+
+/**
+ * Record user data to Google Sheets
+ * @param {QuestionnaireData} questionnaireData - Client questionnaire responses
+ * @returns {Promise<void>}
+ */
+const recordUserData = async (questionnaireData) => {
+    try {
+        // Extract first four fields to create UserData object
+        const userData = {
+            name: questionnaireData.name,
+            email: questionnaireData.email,
+            phone: questionnaireData.phone,
+            location: questionnaireData.location
+        };
+
+        // Initialize Google Sheets API with service account credentials
+        const auth = new google.auth.GoogleAuth({
+            credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
+            scopes: ['https://www.googleapis.com/auth/drive.file']
+        });
+
+        const sheets = google.sheets({ version: 'v4', auth });
+        const spreadsheetId = process.env.GOOGLE_SHEET_ID;
+
+        // Prepare row data
+        const values = [
+            [
+                userData.email,
+                userData.name,
+                userData.phone,
+                userData.location,
+                new Date().toISOString() // Timestamp
+            ]
+        ];
+
+        // Append row to the sheet
+        await sheets.spreadsheets.values.append({
+            spreadsheetId,
+            range: 'Sheet1!A:E', // Adjust sheet name and range as needed
+            valueInputOption: 'RAW',
+            requestBody: {
+                values
+            }
+        });
+
+        console.log('User data recorded successfully:', userData);
+    } catch (error) {
+        console.error('Error recording user data to Google Sheets:', error);
+        // throw error;
     }
 }
 
@@ -225,6 +286,11 @@ exports.handler = async (event) => {
         }
 
         const questionnaireData = JSON.parse(event.body);
+
+        // Record user data to Google Sheets asynchronously
+        recordUserData(questionnaireData).catch(error => {
+            console.error('Error recording user data to Google Sheets:', error);
+        });
         
         // Log the questionnaire data for processing
         console.log("Questionnaire Data:", JSON.stringify(questionnaireData, null, 2));
