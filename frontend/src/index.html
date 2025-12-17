@@ -224,7 +224,7 @@
               </div>
             </div>
 
-            <div class="confirmation-section">
+            <div class="confirmation-section" id="confirmation-concerns">
               <h3>Primary Concerns</h3>
               <div class="confirmation-item">
                 <p x-show="form.primaryConcerns.anxiety">Anxiety</p>
@@ -239,7 +239,7 @@
               </div>
             </div>
 
-            <div class="confirmation-section">
+            <div class="confirmation-section" id="confirmation-traits">
               <h3>Personality Traits</h3>
               <div class="confirmation-item">
                 <p x-show="form.personalityTraits.knowledgeable">Knowledgeable</p>
@@ -257,14 +257,14 @@
               </div>
             </div>
 
-            <div class="confirmation-section">
+            <div class="confirmation-section" id="confirmation-distress">
               <h3>Distress Level</h3>
               <div class="confirmation-item">
                 <span x-text="form.distressLevel + ' out of 10'"></span>
               </div>
             </div>
 
-            <div class="confirmation-section">
+            <div class="confirmation-section" id="confirmation-previous">
               <h3>Previous Experience</h3>
               <div class="confirmation-item">
                 <span
@@ -276,7 +276,7 @@
               </div>
             </div>
 
-            <div class="confirmation-section">
+            <div class="confirmation-section" id="confirmation-approach">
               <h3>Therapy Approach</h3>
               <div class="confirmation-item">
                 <span
@@ -290,7 +290,7 @@
               </div>
             </div>
 
-            <div class="confirmation-section" x-show="form.comments">
+            <div class="confirmation-section" id="confirmation-comments" x-show="form.comments">
               <h3>Additional Comments</h3>
               <div class="confirmation-item">
                 <span x-text="form.comments"></span>
