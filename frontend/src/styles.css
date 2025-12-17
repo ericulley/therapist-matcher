@@ -6,7 +6,6 @@
 
 html {
   font-size: 14px; /* Sets the REM size */
-  background: linear-gradient(135deg, #e8e9eb 0%, #f5f6f7 50%, #e0e1e3 100%);
   min-height: 100vh;
 }
 
