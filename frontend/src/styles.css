@@ -335,7 +335,7 @@ textarea:focus {
   gap: .75rem .5rem;
 }
 
-.confirmation-overview > :last-child {
+.confirmation-overview > #confirmation-comments {
   grid-column: 1 / -1;
 }
 
