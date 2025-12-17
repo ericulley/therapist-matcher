@@ -224,22 +224,13 @@ textarea:focus {
 .response-message {
   margin-top: 1rem;
   padding: 2rem;
-  border-radius: 20px;
   text-align: center;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .response-message.hidden {
   display: none;
 }
 
-.response-message.success {
-  background: rgba(212, 237, 218, 0.7);
-  color: #155724;
-  border: 1px solid rgba(195, 230, 203, 0.5);
-  box-shadow: 0 4px 20px rgba(21, 87, 36, 0.1);
-}
 
 .response-message.error {
   background: rgba(248, 215, 218, 0.7);
@@ -264,15 +255,10 @@ textarea:focus {
 }
 
 .therapist-info {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   padding: 1.5rem;
-  border: 1px solid rgba(200, 200, 200, 0.3);
   border-radius: 16px;
   margin-bottom: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .therapist-info h4 {
@@ -293,11 +279,6 @@ textarea:focus {
 .next-steps-section {
   margin-bottom: 1.5rem;
   padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(200, 200, 200, 0.2);
-  border-radius: 14px;
 }
 
 .reasoning-section h5,
