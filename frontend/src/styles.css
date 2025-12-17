@@ -330,6 +330,13 @@ textarea:focus {
 /* Confirmation Overview Styles */
 .confirmation-overview {
   margin: 1.75rem 0rem 0rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .75rem .5rem;
+}
+
+.confirmation-overview > :last-child {
+  grid-column: 1 / -1;
 }
 
 .confirmation-section {
