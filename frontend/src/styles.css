@@ -329,7 +329,7 @@ textarea:focus {
 
 /* Confirmation Overview Styles */
 .confirmation-overview {
-  margin: 1.75rem;
+  margin-top: 1.75rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .75rem .5rem;
