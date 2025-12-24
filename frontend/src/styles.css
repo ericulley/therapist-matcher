@@ -179,7 +179,7 @@ textarea:focus {
 .checkbox-label:hover,
 .radio-label:hover {
   background: transparent;
-  border-color: #736868;
+  border-color: #0d0d0d;
   transform: translateX(2px);
 }
 
