@@ -169,7 +169,7 @@ textarea:focus {
   font-weight: normal;
   margin-bottom: 0;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(150, 150, 150, 0.3);
+  border: 1px solid #736868;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -179,7 +179,7 @@ textarea:focus {
 .checkbox-label:hover,
 .radio-label:hover {
   background: transparent;
-  border-color: #736868;
+  border-color: #0d0d0d;
   transform: translateX(2px);
 }
 
@@ -192,7 +192,7 @@ textarea:focus {
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid rgba(150, 150, 150, 0.3);
+  border: 1px solid #736868;
 }
 /* Checkbox square  */
 .checkbox-label input {
