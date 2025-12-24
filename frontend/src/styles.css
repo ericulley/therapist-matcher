@@ -192,7 +192,7 @@ textarea:focus {
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid rgba(150, 150, 150, 0.3);
+  border: 1px solid #736868;
 }
 /* Checkbox square  */
 .checkbox-label input {
