@@ -33,7 +33,7 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("matcher", () => {
     return {
       // Site Properties and Functions
-      page: 1,
+      page: 0,
       nextPage() {
         if (this.page < 7) this.page++;
         window.scroll({
