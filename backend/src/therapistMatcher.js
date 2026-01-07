@@ -48,7 +48,7 @@ const recordUserData = async (questionnaireData) => {
         // Initialize Google Sheets API with service account credentials
         const auth = new google.auth.GoogleAuth({
             credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
-            scopes: ['https://www.googleapis.com/auth/drive.file']
+            scopes: ['https://www.googleapis.com/auth/spreadsheets']
         });
 
         const sheets = google.sheets({ version: 'v4', auth });
@@ -68,7 +68,7 @@ const recordUserData = async (questionnaireData) => {
         // Append row to the sheet
         await sheets.spreadsheets.values.append({
             spreadsheetId,
-            range: 'Sheet1!A:E', // Adjust sheet name and range as needed
+            range: 'Sheet1!A:E',
             valueInputOption: 'RAW',
             requestBody: {
                 values
