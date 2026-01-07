@@ -64,3 +64,6 @@ temp/
 # Packaged files
 *.zip
 *.tgz
+
+# Secrets
+secrets.json
