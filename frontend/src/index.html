@@ -561,7 +561,7 @@
           <div id="response-message" class="response-message hidden"></div>
         </section>
         <!-- Page Navigation -->
-        <div id="page-nav">
+        <div id="page-nav" :class="{ 'intro-only': page ===1 }">
           <button x-show="page === 1" x-on:click="nextPage" type="button">
             Get Started
           </button>

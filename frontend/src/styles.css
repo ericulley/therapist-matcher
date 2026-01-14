@@ -97,6 +97,10 @@ nav {
   justify-content: space-between;
 }
 
+#page-nav.intro-only {
+  justify-content: center;
+}
+
 /* Main and Section styles */
 main {
   width: 80%;
