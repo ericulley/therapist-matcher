@@ -109,6 +109,11 @@ main {
   padding: 3rem 5rem;
 }
 
+main.intro-layout {
+  width: 90%;
+  max-width: 1200px;
+}
+
 .page {
   background: transparent;
   padding: 3rem;

@@ -32,7 +32,7 @@
         <p class="nav-label">Therapist Matcher</p>
       </div>
     </nav>
-    <main>
+    <main :class="{ 'intro-layout': page ===1 }">
       <form @submit.prevent="submitQuestionaire">
         <!-- Intro Page -->
         <section x-show="page === 1" class="page intro-page">
