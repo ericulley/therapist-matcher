@@ -131,6 +131,17 @@ main {
   background-color: aqua;
 }
 
+.intro-page .intro-subtitle {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.intro-page p {
+  font-family: "Arvo", serif;
+}
+
 .question-group {
   margin-bottom: 2rem;
 }
