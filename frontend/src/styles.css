@@ -126,6 +126,8 @@ main.intro-layout {
 .intro-page {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  min-height: 70vh;
 }
 
 .container {
@@ -134,12 +136,26 @@ main.intro-layout {
 }
 
 #intro-left {
-  background-color: #721c24;
+  background-color: transparent;
+  padding: 30;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 
 #intro-right {
-  background-color: aqua;
-  padding: 30;
+  background-color: transparent;
+  padding: 12rem 8rem 1rem 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.intro-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .intro-page h1 {
