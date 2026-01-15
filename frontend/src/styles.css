@@ -110,8 +110,9 @@ main {
 }
 
 main.intro-layout {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
 }
 
 .page {
@@ -128,27 +129,47 @@ main.intro-layout {
 }
 
 .container {
-  width: 50%;
-  height: 30rem;
+  width: 100%;
+  height: flex;
 }
 
 #intro-left {
   background-color: #721c24;
+  padding: 30;
 }
 
 #intro-right {
   background-color: aqua;
+  padding: 30;
+}
+
+.intro-page h1 {
+  color: #736868;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "futura-pt", sans-serif;
+  text-align: left;
+  border-bottom: 1px solid #736868;
+  padding-bottom: 0.5rem;
 }
 
 .intro-page .intro-subtitle {
   font-family: "Encode Sans Condensed", sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
   margin-top: 1rem;
+  color: #bfbdbe;
+  font-weight: 800;
 }
 
 .intro-page p {
   font-family: "Arvo", serif;
+  color: #736868;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 100;
 }
 
 .question-group {
