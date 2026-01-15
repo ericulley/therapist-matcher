@@ -98,7 +98,8 @@ nav {
 }
 
 #page-nav.intro-only {
-  justify-content: center;
+  justify-content: right;
+  padding: 0rem 10rem;
 }
 
 /* Main and Section styles */
