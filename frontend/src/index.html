@@ -593,9 +593,6 @@
         </section>
         <!-- Page Navigation -->
         <div id="page-nav" :class="{ 'intro-only': page ===1 }">
-          <button x-show="page === 1" x-on:click="nextPage" type="button">
-            GET STARTED
-          </button>
           <button
             x-show="page >=2 && page < 8"
             x-on:click="prevPage"
