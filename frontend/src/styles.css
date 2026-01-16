@@ -118,7 +118,7 @@ main.intro-layout {
 
 .page {
   background: transparent;
-  padding: 3rem;
+  padding: 5rem;
   transition: all 0.3s ease;
 }
 
@@ -490,7 +490,7 @@ input[type="range"]::-moz-range-thumb:hover {
 }
 
 .page {
-  animation: fadeIn 0.4s ease-out;
+  animation: fadeIn 0.9s ease-out;
 }
 
 /* Responsive Design */

@@ -19,6 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600&family=Arvo:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body x-data="matcher">
     <nav>
@@ -587,7 +591,7 @@
         <!-- Page Navigation -->
         <div id="page-nav" :class="{ 'intro-only': page ===1 }">
           <button x-show="page === 1" x-on:click="nextPage" type="button">
-            Get Started
+            GET STARTED
           </button>
           <button
             x-show="page >=2 && page < 8"
