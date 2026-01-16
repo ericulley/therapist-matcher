@@ -103,7 +103,7 @@ nav {
 }
 
 #intro-right button {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 3;
   display: block;
   margin-left: auto;
@@ -521,5 +521,19 @@ input[type="range"]::-moz-range-thumb:hover {
     width: 8rem;
     height: 2.75rem;
     font-size: 1rem;
+  }
+
+  .intro-page {
+    flex-direction: column;
+  }
+
+  #intro-right {
+    padding: 0rem 1rem;
+  }
+
+  #intro-right button {
+    margin-right: 0;
+    margin-left: auto;
+    letter-spacing: 0.15rem;
   }
 }
