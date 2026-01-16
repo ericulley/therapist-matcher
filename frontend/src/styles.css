@@ -102,6 +102,14 @@ nav {
   padding: 0rem 10rem;
 }
 
+#intro-right button {
+  font-size: 11px;
+  letter-spacing: 3;
+  display: block;
+  margin-left: auto;
+  margin-right: 3rem;
+}
+
 /* Main and Section styles */
 main {
   width: 80%;
@@ -148,7 +156,7 @@ main.intro-layout {
   background-color: transparent;
   padding: 12rem 3rem 1rem 1rem;
   flex: 1;
-  min-width: 0;
+  /* min-width: 0; */
 }
 
 .intro-image {
