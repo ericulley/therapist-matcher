@@ -112,15 +112,7 @@ nav {
 
 /* Main and Section styles */
 main {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 5rem;
-}
-
-main.intro-layout {
   width: 100%;
-  max-width: 100%;
   padding: 1rem;
 }
 
@@ -137,6 +129,13 @@ main.intro-layout {
   justify-content: space-between;
   width: 100%;
   min-height: 70vh;
+}
+
+.width-80 {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 5rem;
 }
 
 .container {

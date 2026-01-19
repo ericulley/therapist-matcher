@@ -3,222 +3,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frog Point Therapy | Therapist Matcher</title>
-    <link
-      rel="icon"
-      href="https://frogpointtherapy.com/wp-content/uploads/2021/04/cropped-fpt-favicon-32x32.jpg"
-      sizes="32x32"
-    />
+    <link rel="icon" href="https://frogpointtherapy.com/wp-content/uploads/2021/04/cropped-fpt-favicon-32x32.jpg" sizes="32x32" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/nor3exn.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600&family=Arvo:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600&family=Arvo:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
   <body x-data="matcher">
     <nav>
       <div id="site-nav">
         <a id="nav-logo" href="https://www.frogpointtherapy.com">
-          <img
-            alt="frog point therapy logo"
-            src="https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoiZnJvZ3BvaW50dGhlcmFweS5jb20iLCJ2Ijo0MDczMDAyMDkzLCJyIjoxLCJpIjoiYzVmZWY5ZmEtNDg0Yi00NTA4LWNmMjYtZjcxNjYyZTA4ODAwIn0/wp-content/uploads/2021/05/highly-rated-couples-counselor-dc.png"
-          />
+          <img alt="frog point therapy logo" src="https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoiZnJvZ3BvaW50dGhlcmFweS5jb20iLCJ2Ijo0MDczMDAyMDkzLCJyIjoxLCJpIjoiYzVmZWY5ZmEtNDg0Yi00NTA4LWNmMjYtZjcxNjYyZTA4ODAwIn0/wp-content/uploads/2021/05/highly-rated-couples-counselor-dc.png" />
         </a>
         <p class="nav-label">Therapist Matcher</p>
       </div>
     </nav>
-    <main :class="{ 'intro-layout': page ===1 }">
+    <main>
       <form @submit.prevent="submitQuestionaire">
         <!-- Intro Page -->
         <section x-show="page === 1" class="page intro-page">
           <div class="container" id="intro-left">
-            <img
-              src="./assets/Collage.png"
-              alt="Therapy session"
-              class="intro-image"
-            />
+            <img src="./assets/Collage.png" alt="Therapy session" class="intro-image" />
           </div>
           <div class="container" id="intro-right">
             <p class="intro-subtitle">FROG POINT THERAPY</p>
             <h1>LET US HELP YOU FIND THE RIGHT MATCH.</h1>
             <p>
-              Finding the right therapist is one of the most important and
-              difficult steps in getting started with therapy. Our matching tool
-              uses AI to connect you with the right therapist by looking for
-              correlations between your description of the things you'd like to
-              work on therapy and each FPT therapist's unique background, skill
-              set, and area of expertise. Our matcher will pair you with the
-              best-fit therapist at FPT, but we strongly encourage each client
-              to interview more than one therapist if they have the willingness
-              to invest in it. As therapists, we never want our clients to feel
-              stuck in a relationship that doesn't feel right, so investing a
-              little time up front to pick the right person can go a long way.
-              Our matcher will ask for your name, number, and email. We might
-              follow up with you to make sure you were matched with a good
-              therapist (either at FPT or outside of our practice!), but we
-              never use any of this information for marketing emails or calls,
-              nor do we make public or sell this data at any point. While our
-              matching tool is not foolproof, it might take some of the
-              guesswork out of honing in on the right therapist. If you're in
-              crisis or having a mental health emergency, please tap into the
-              resources below for more immediate support. We hope you have a
-              transformative experience in your next therapy journey and are
-              here to help make that happen in any way we can. Let's roll up our
-              sleeves and get to work!
+              Finding the right therapist is one of the most important and difficult steps in getting started with therapy. Our matching tool uses AI to connect you with the right therapist by looking for correlations between your description of the things you'd like to work on therapy and each FPT therapist's unique background, skill set, and area of expertise. Our matcher will pair you with the best-fit therapist at FPT, but we strongly encourage each client to interview more than one therapist if they have the willingness to invest in it. As therapists, we never want our clients to feel stuck in a relationship that doesn't feel right, so investing a little time up front to pick the right person can go a long way. Our matcher will ask for your name, number, and email. We might follow up with you to make sure you were matched with a good therapist (either at FPT or outside of our practice!), but we never use any of this information for marketing emails or calls, nor do we make public
+              or sell this data at any point. While our matching tool is not foolproof, it might take some of the guesswork out of honing in on the right therapist. If you're in crisis or having a mental health emergency, please tap into the resources below for more immediate support. We hope you have a transformative experience in your next therapy journey and are here to help make that happen in any way we can. Let's roll up our sleeves and get to work!
             </p>
-            <button x-show="page === 1" x-on:click="nextPage" type="button">
-              GET STARTED
-            </button>
+            <button x-show="page === 1" x-on:click="nextPage" type="button">GET STARTED</button>
           </div>
         </section>
         <!-- Page 2: Personal Information -->
-        <section x-show="page === 2" class="page">
+        <section x-show="page === 2" class="page width-80">
           <h1>Lets Get Started</h1>
           <div class="question-group">
-            <input
-              x-model="form.name"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-            />
+            <input x-model="form.name" type="text" id="name" name="name" placeholder="Name" />
           </div>
           <div class="question-group">
-            <input
-              x-model="form.email"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-            />
+            <input x-model="form.email" type="email" id="email" name="email" placeholder="Email" />
           </div>
           <div class="question-group">
-            <input
-              x-model="form.phone"
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Phone Number"
-            />
+            <input x-model="form.phone" type="tel" id="phone" name="phone" placeholder="Phone Number" />
           </div>
           <div class="question-group">
             <select x-model="form.location" id="location" name="location">
-              <option
-                value=""
-                label="Which location are you inquiring about?"
-                disabled
-              />
+              <option value="" label="Which location are you inquiring about?" disabled />
               <option value="dc">Washington, D.C.</option>
               <option value="slc">Salt Lake City, Utah</option>
             </select>
           </div>
         </section>
         <!-- Page 3: Primary Concerns & Distress Level -->
-        <section x-show="page === 3" class="page">
+        <section x-show="page === 3" class="page width-80">
           <h1>Primary Concerns & Distress Level</h1>
           <div class="question-group">
-            <label for="primary-concerns" class="question-text"
-              >What would you like to work on in therapy? (Select all that
-              apply)</label
-            >
+            <label for="primary-concerns" class="question-text">What would you like to work on in therapy? (Select all that apply)</label>
             <div class="checkbox-group">
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.anxiety"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="anxiety"
-                />
+                <input x-model="form.primaryConcerns.anxiety" type="checkbox" name="primary-concerns" value="anxiety" />
                 Anxiety
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.depression"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="depression"
-                />
+                <input x-model="form.primaryConcerns.depression" type="checkbox" name="primary-concerns" value="depression" />
                 Depression
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.relationshipIssues"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="relationship-issues"
-                />
+                <input x-model="form.primaryConcerns.relationshipIssues" type="checkbox" name="primary-concerns" value="relationship-issues" />
                 Relationship Issues
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.stressManagement"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="stress-management"
-                />
+                <input x-model="form.primaryConcerns.stressManagement" type="checkbox" name="primary-concerns" value="stress-management" />
                 Stress Management
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.trauma"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="trauma"
-                />
+                <input x-model="form.primaryConcerns.trauma" type="checkbox" name="primary-concerns" value="trauma" />
                 Trauma/PTSD
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.griefLoss"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="grief-loss"
-                />
+                <input x-model="form.primaryConcerns.griefLoss" type="checkbox" name="primary-concerns" value="grief-loss" />
                 Grief and Loss
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.selfEsteem"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="self-esteem"
-                />
+                <input x-model="form.primaryConcerns.selfEsteem" type="checkbox" name="primary-concerns" value="self-esteem" />
                 Self-esteem Issues
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.primaryConcerns.other"
-                  type="checkbox"
-                  name="primary-concerns"
-                  value="other"
-                />
+                <input x-model="form.primaryConcerns.other" type="checkbox" name="primary-concerns" value="other" />
                 Other
               </label>
             </div>
           </div>
 
           <div class="question-group">
-            <label for="distress-level" class="question-text"
-              >How distressed are you right now on a scale from 1 to 10?</label
-            >
-            <input
-              x-model="form.distressLevel"
-              type="range"
-              id="distress-level"
-              name="distress-level"
-              min="1"
-              max="10"
-              step="1"
-            />
+            <label for="distress-level" class="question-text">How distressed are you right now on a scale from 1 to 10?</label>
+            <input x-model="form.distressLevel" type="range" id="distress-level" name="distress-level" min="1" max="10" step="1" />
             <div class="slider-labels">
               <span>1 - Not at all</span>
               <span x-text="form.distressLevel"></span>
@@ -227,129 +109,61 @@
           </div>
         </section>
         <!-- Page 4: Personal Description & Session Type -->
-        <section x-show="page === 4" class="page">
+        <section x-show="page === 4" class="page width-80">
           <h1>Personal Description & Session Type</h1>
           <div class="question-group">
-            <label for="personality-traits" class="question-text"
-              >Choose a few words that best describe you:</label
-            >
+            <label for="personality-traits" class="question-text">Choose a few words that best describe you:</label>
             <div class="checkbox-group">
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.knowledgeable"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="knowledgeable"
-                />
+                <input x-model="form.personalityTraits.knowledgeable" type="checkbox" name="personality-traits" value="knowledgeable" />
                 Knowledgeable
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.gentle"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="gentle"
-                />
+                <input x-model="form.personalityTraits.gentle" type="checkbox" name="personality-traits" value="gentle" />
                 Gentle
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.affirming"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="affirming"
-                />
+                <input x-model="form.personalityTraits.affirming" type="checkbox" name="personality-traits" value="affirming" />
                 Affirming
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.direct"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="direct"
-                />
+                <input x-model="form.personalityTraits.direct" type="checkbox" name="personality-traits" value="direct" />
                 Direct
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.structured"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="structured"
-                />
+                <input x-model="form.personalityTraits.structured" type="checkbox" name="personality-traits" value="structured" />
                 Structured
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.unstructured"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="unstructured"
-                />
+                <input x-model="form.personalityTraits.unstructured" type="checkbox" name="personality-traits" value="unstructured" />
                 Unstructured
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.practical"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="practical"
-                />
+                <input x-model="form.personalityTraits.practical" type="checkbox" name="personality-traits" value="practical" />
                 Practical
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.spiritual"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="spiritual"
-                />
+                <input x-model="form.personalityTraits.spiritual" type="checkbox" name="personality-traits" value="spiritual" />
                 Spiritual
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.cerebral"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="cerebral"
-                />
+                <input x-model="form.personalityTraits.cerebral" type="checkbox" name="personality-traits" value="cerebral" />
                 Cerebral
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.warm"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="warm"
-                />
+                <input x-model="form.personalityTraits.warm" type="checkbox" name="personality-traits" value="warm" />
                 Warm
               </label>
               <label class="checkbox-label">
-                <input
-                  x-model="form.personalityTraits.funny"
-                  type="checkbox"
-                  name="personality-traits"
-                  value="funny"
-                />
+                <input x-model="form.personalityTraits.funny" type="checkbox" name="personality-traits" value="funny" />
                 Funny
               </label>
             </div>
           </div>
           <div class="question-group">
-            <label for="session-type" class="question-text"
-              >Are you looking for in-person sessions, virtual sessions, or open
-              to a mix of both?</label
-            >
-            <select
-              x-model="form.sessionType"
-              id="session-type"
-              name="session-type"
-            >
-              <option
-                value=""
-                label="-- Select Session Type --"
-                disabled
-              ></option>
+            <label for="session-type" class="question-text">Are you looking for in-person sessions, virtual sessions, or open to a mix of both?</label>
+            <select x-model="form.sessionType" id="session-type" name="session-type">
+              <option value="" label="-- Select Session Type --" disabled></option>
               <option value="in-person">In-person</option>
               <option value="virtual">Virtual</option>
               <option value="either-both">Either/Both</option>
@@ -357,115 +171,62 @@
           </div>
         </section>
         <!-- Page 5: Therapy History -->
-        <section x-show="page === 5" class="page">
+        <section x-show="page === 5" class="page width-80">
           <h1>Therapy History</h1>
           <div class="question-group">
-            <label for="previous-therapy" class="question-text"
-              >Have you participated in therapy before?</label
-            >
+            <label for="previous-therapy" class="question-text">Have you participated in therapy before?</label>
             <div class="radio-group">
               <label class="radio-label">
-                <input
-                  x-model="form.previousTherapy"
-                  type="radio"
-                  name="previous-therapy"
-                  value="never"
-                />
+                <input x-model="form.previousTherapy" type="radio" name="previous-therapy" value="never" />
                 No, this is my first time
               </label>
               <label class="radio-label">
-                <input
-                  x-model="form.previousTherapy"
-                  type="radio"
-                  name="previous-therapy"
-                  value="some-experience"
-                />
+                <input x-model="form.previousTherapy" type="radio" name="previous-therapy" value="some-experience" />
                 Yes, I have some experience
               </label>
               <label class="radio-label">
-                <input
-                  x-model="form.previousTherapy"
-                  type="radio"
-                  name="previous-therapy"
-                  value="extensive-experience"
-                />
+                <input x-model="form.previousTherapy" type="radio" name="previous-therapy" value="extensive-experience" />
                 Yes, I have extensive experience
               </label>
             </div>
           </div>
 
           <div class="question-group">
-            <label for="therapy-approach" class="question-text"
-              >Do you have a preference for therapy approach or style?</label
-            >
+            <label for="therapy-approach" class="question-text">Do you have a preference for therapy approach or style?</label>
             <div class="radio-group">
               <label class="radio-label">
-                <input
-                  x-model="form.therapyApproach"
-                  type="radio"
-                  name="therapy-approach"
-                  value="no-preference"
-                />
+                <input x-model="form.therapyApproach" type="radio" name="therapy-approach" value="no-preference" />
                 No preference - open to therapist's recommendation
               </label>
               <label class="radio-label">
-                <input
-                  x-model="form.therapyApproach"
-                  type="radio"
-                  name="therapy-approach"
-                  value="talk-therapy"
-                />
+                <input x-model="form.therapyApproach" type="radio" name="therapy-approach" value="talk-therapy" />
                 Traditional talk therapy (psychodynamic, humanistic)
               </label>
               <label class="radio-label">
-                <input
-                  x-model="form.therapyApproach"
-                  type="radio"
-                  name="therapy-approach"
-                  value="cbt"
-                />
+                <input x-model="form.therapyApproach" type="radio" name="therapy-approach" value="cbt" />
                 Cognitive Behavioral Therapy (CBT)
               </label>
               <label class="radio-label">
-                <input
-                  x-model="form.therapyApproach"
-                  type="radio"
-                  name="therapy-approach"
-                  value="solution-focused"
-                />
+                <input x-model="form.therapyApproach" type="radio" name="therapy-approach" value="solution-focused" />
                 Solution-focused therapy
               </label>
               <label class="radio-label">
-                <input
-                  x-model="form.therapyApproach"
-                  type="radio"
-                  name="therapy-approach"
-                  value="mindfulness"
-                />
+                <input x-model="form.therapyApproach" type="radio" name="therapy-approach" value="mindfulness" />
                 Mindfulness-based approaches
               </label>
             </div>
           </div>
         </section>
         <!-- Page 6: Additional Comments -->
-        <section x-show="page === 6" class="page">
+        <section x-show="page === 6" class="page width-80">
           <h1>Therapy Goals</h1>
           <div class="question-group">
-            <label for="comments" class="question-text"
-              >What brings you in, and what do you want to work on in
-              therapy?</label
-            >
-            <textarea
-              x-model="form.comments"
-              id="comments"
-              name="comments"
-              rows="4"
-              placeholder="Share anything else you'd like us to know..."
-            ></textarea>
+            <label for="comments" class="question-text">What brings you in, and what do you want to work on in therapy?</label>
+            <textarea x-model="form.comments" id="comments" name="comments" rows="4" placeholder="Share anything else you'd like us to know..."></textarea>
           </div>
         </section>
         <!-- Page 7: Confirmation -->
-        <section x-show="page === 7" class="page">
+        <section x-show="page === 7" class="page width-80">
           <h1>Confirmation</h1>
           <p>
             Please confirm the following data looks correct and click
@@ -480,15 +241,11 @@
                 <p>Phone: <span x-text="form.phone"></span></p>
                 <p>
                   Location:
-                  <span
-                    x-text="form.location === 'dc' ? 'Washington, D.C.' : form.location === 'slc' ? 'Salt Lake City, Utah' : 'Not specified'"
-                  ></span>
+                  <span x-text="form.location === 'dc' ? 'Washington, D.C.' : form.location === 'slc' ? 'Salt Lake City, Utah' : 'Not specified'"></span>
                 </p>
                 <p>
                   Session Type:
-                  <span
-                    x-text="form.sessionType === 'in-person' ? 'In-person' : form.sessionType === 'virtual' ? 'Virtual' : form.sessionType === 'either-both' ? 'Either/Both' : 'Not specified'"
-                  ></span>
+                  <span x-text="form.sessionType === 'in-person' ? 'In-person' : form.sessionType === 'virtual' ? 'Virtual' : form.sessionType === 'either-both' ? 'Either/Both' : 'Not specified'"></span>
                 </p>
               </div>
             </div>
@@ -498,32 +255,20 @@
               <div class="confirmation-item">
                 <p x-show="form.primaryConcerns.anxiety">Anxiety</p>
                 <p x-show="form.primaryConcerns.depression">Depression</p>
-                <p x-show="form.primaryConcerns.relationshipIssues">
-                  Relationship Issues
-                </p>
-                <p x-show="form.primaryConcerns.stressManagement">
-                  Stress Management
-                </p>
+                <p x-show="form.primaryConcerns.relationshipIssues">Relationship Issues</p>
+                <p x-show="form.primaryConcerns.stressManagement">Stress Management</p>
                 <p x-show="form.primaryConcerns.trauma">Trauma/PTSD</p>
                 <p x-show="form.primaryConcerns.griefLoss">Grief and Loss</p>
-                <p x-show="form.primaryConcerns.selfEsteem">
-                  Self-esteem Issues
-                </p>
+                <p x-show="form.primaryConcerns.selfEsteem">Self-esteem Issues</p>
                 <p x-show="form.primaryConcerns.other">Other</p>
-                <p
-                  x-show="!form.primaryConcerns.anxiety && !form.primaryConcerns.depression && !form.primaryConcerns.relationshipIssues && !form.primaryConcerns.stressManagement && !form.primaryConcerns.trauma && !form.primaryConcerns.griefLoss && !form.primaryConcerns.selfEsteem && !form.primaryConcerns.other"
-                >
-                  No concerns selected
-                </p>
+                <p x-show="!form.primaryConcerns.anxiety && !form.primaryConcerns.depression && !form.primaryConcerns.relationshipIssues && !form.primaryConcerns.stressManagement && !form.primaryConcerns.trauma && !form.primaryConcerns.griefLoss && !form.primaryConcerns.selfEsteem && !form.primaryConcerns.other">No concerns selected</p>
               </div>
             </div>
 
             <div class="confirmation-section" id="confirmation-traits">
               <h3>Personality Traits</h3>
               <div class="confirmation-item">
-                <p x-show="form.personalityTraits.knowledgeable">
-                  Knowledgeable
-                </p>
+                <p x-show="form.personalityTraits.knowledgeable">Knowledgeable</p>
                 <p x-show="form.personalityTraits.gentle">Gentle</p>
                 <p x-show="form.personalityTraits.affirming">Affirming</p>
                 <p x-show="form.personalityTraits.direct">Direct</p>
@@ -534,11 +279,7 @@
                 <p x-show="form.personalityTraits.cerebral">Cerebral</p>
                 <p x-show="form.personalityTraits.warm">Warm</p>
                 <p x-show="form.personalityTraits.funny">Funny</p>
-                <p
-                  x-show="!form.personalityTraits.knowledgeable && !form.personalityTraits.gentle && !form.personalityTraits.affirming && !form.personalityTraits.direct && !form.personalityTraits.structured && !form.personalityTraits.unstructured && !form.personalityTraits.practical && !form.personalityTraits.spiritual && !form.personalityTraits.cerebral && !form.personalityTraits.warm && !form.personalityTraits.funny"
-                >
-                  No traits selected
-                </p>
+                <p x-show="!form.personalityTraits.knowledgeable && !form.personalityTraits.gentle && !form.personalityTraits.affirming && !form.personalityTraits.direct && !form.personalityTraits.structured && !form.personalityTraits.unstructured && !form.personalityTraits.practical && !form.personalityTraits.spiritual && !form.personalityTraits.cerebral && !form.personalityTraits.warm && !form.personalityTraits.funny">No traits selected</p>
               </div>
             </div>
 
@@ -575,11 +316,7 @@
               </div>
             </div>
 
-            <div
-              class="confirmation-section"
-              id="confirmation-comments"
-              x-show="form.comments"
-            >
+            <div class="confirmation-section" id="confirmation-comments" x-show="form.comments">
               <h3>Additional Comments</h3>
               <div class="confirmation-item">
                 <span x-text="form.comments"></span>
@@ -588,28 +325,14 @@
           </div>
         </section>
         <!-- Page 8: Match Results -->
-        <section x-show="page === 8" class="page">
+        <section x-show="page === 8" class="page width-80">
           <div id="response-message" class="response-message hidden"></div>
         </section>
         <!-- Page Navigation -->
-        <div id="page-nav" :class="{ 'intro-only': page ===1 }">
-          <button
-            x-show="page >=2 && page < 8"
-            x-on:click="prevPage"
-            type="button"
-          >
-            Prev
-          </button>
-          <button
-            x-show="page >= 2 && page <= 6"
-            x-on:click="nextPage"
-            type="button"
-          >
-            Next
-          </button>
-          <button x-show="page === 7" type="submit" id="submit-btn">
-            Submit
-          </button>
+        <div id="page-nav" class="width-80">
+          <button x-show="page >=2 && page < 8" x-on:click="prevPage" type="button">Prev</button>
+          <button x-show="page >= 2 && page <= 6" x-on:click="nextPage" type="button">Next</button>
+          <button x-show="page === 7" type="submit" id="submit-btn">Submit</button>
         </div>
       </form>
     </main>
