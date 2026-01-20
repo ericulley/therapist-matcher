@@ -11,6 +11,7 @@
   "author": "Eric Culley",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-bedrock-runtime": "^3.911.0"
+    "@aws-sdk/client-bedrock-runtime": "^3.911.0",
+    "googleapis": "^169.0.0"
   }
 }
