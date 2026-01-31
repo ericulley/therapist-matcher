@@ -404,12 +404,16 @@ textarea:focus {
 .confirmation-section {
   margin-bottom: 1.75rem;
 }
+#subheading {
+  margin-bottom: 0rem;
+}
 
 .text-centered {
   text-align: center;
   color: #736868;
   font-size: 1.25rem;
   letter-spacing: 0px;
+  margin-bottom: 4rem;
 }
 
 .confirmation-section h3 {
