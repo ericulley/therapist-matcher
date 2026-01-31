@@ -1,8 +1,6 @@
 // App Constants
-const API_GATEWAY_KEY =
-  "3239dafe68ecdfda0059990940cd669d6b27b6fa60c2f094d44988f13ddfee9c";
-const API_GATEWAY_URL =
-  "https://81bnq1ing6.execute-api.us-west-2.amazonaws.com/prod/matcher";
+const API_GATEWAY_KEY = "3239dafe68ecdfda0059990940cd669d6b27b6fa60c2f094d44988f13ddfee9c";
+const API_GATEWAY_URL = "https://81bnq1ing6.execute-api.us-west-2.amazonaws.com/prod/matcher";
 
 // Success Message Template
 const successMessage = (recommendation) => {
@@ -142,11 +140,10 @@ document.addEventListener("alpine:init", () => {
           if (recommendation) {
             responseDiv.innerHTML = successMessage(recommendation);
           } else {
-            responseDiv.textContent =
-              "Recommendation received but format was unexpected.";
+            responseDiv.textContent = "Recommendation received but format was unexpected.";
           }
           responseDiv.className = "response-message success";
-          this.page = 7;
+          this.page = 8;
         } catch (error) {
           if (error instanceof Error) {
             console.error("Error submitting questionnaire:", error);
@@ -156,7 +153,7 @@ document.addEventListener("alpine:init", () => {
             responseDiv.textContent = `There was an error submitting your questionnaire: ${error}. Please try again or contact support.`;
           }
           responseDiv.className = "response-message error";
-          this.page = 7;
+          this.page = 8;
         }
       },
     };
