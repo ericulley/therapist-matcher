@@ -416,6 +416,9 @@ textarea:focus {
   font-weight: 600;
   padding-bottom: 0.5rem;
   letter-spacing: -0.2px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
 }
 
 .confirmation-item {
