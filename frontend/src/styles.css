@@ -405,8 +405,13 @@ textarea:focus {
   margin-bottom: 1.75rem;
 }
 
+.text-centered {
+  text-align: center;
+  color: #736868;
+}
+
 .confirmation-section h3 {
-  color: #1a1a1a;
+  color: #736868;
   font-size: 1.1rem;
   font-weight: 600;
   padding-bottom: 0.5rem;
