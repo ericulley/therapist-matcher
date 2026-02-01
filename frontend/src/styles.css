@@ -145,7 +145,7 @@ main {
 
 #intro-left {
   background-color: transparent;
-  padding: 30;
+  padding: 30px;
   flex: 1;
   min-width: 0;
   overflow: hidden;
@@ -153,9 +153,12 @@ main {
 
 #intro-right {
   background-color: transparent;
-  padding: 12rem 3rem 1rem 1rem;
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .intro-image {
