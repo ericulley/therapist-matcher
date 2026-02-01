@@ -422,9 +422,9 @@ textarea:focus {
   font-weight: 500;
   padding-bottom: 0.5rem;
   letter-spacing: 0px;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 8px;
+  border-bottom: 1px solid #736868;
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .confirmation-item {
