@@ -551,4 +551,8 @@ input[type="range"]::-moz-range-thumb:hover {
     margin-left: auto;
     letter-spacing: 0.15rem;
   }
+
+  #page-nav {
+    gap: 4rem;
+  }
 }
