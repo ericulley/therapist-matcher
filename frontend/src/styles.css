@@ -28,12 +28,12 @@ h1 {
 }
 
 h2 {
-  color: #2a2a2a;
+  /* color: #f10e0e; */
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 
 button {
@@ -404,13 +404,27 @@ textarea:focus {
 .confirmation-section {
   margin-bottom: 1.75rem;
 }
+#subheading {
+  margin-bottom: 0.5rem;
+}
+
+.text-centered {
+  text-align: center;
+  color: #736868;
+  font-size: 1.25rem;
+  letter-spacing: 0px;
+  margin-bottom: 4rem;
+}
 
 .confirmation-section h3 {
-  color: #1a1a1a;
-  font-size: 1.1rem;
-  font-weight: 600;
+  color: #736868;
+  font-size: 1.25rem;
+  font-weight: 500;
   padding-bottom: 0.5rem;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
+  border-bottom: 1px solid #736868;
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .confirmation-item {
@@ -421,6 +435,8 @@ textarea:focus {
 .confirmation-item p {
   color: #736868;
   line-height: 1.5;
+  font-size: 1.1rem;
+  letter-spacing: 0px;
 }
 
 /* Range Slider Styles */
@@ -534,5 +550,9 @@ input[type="range"]::-moz-range-thumb:hover {
     margin-right: 0;
     margin-left: auto;
     letter-spacing: 0.15rem;
+  }
+
+  #page-nav {
+    gap: 4rem;
   }
 }
