@@ -145,7 +145,7 @@ main {
 
 #intro-left {
   background-color: transparent;
-  padding: 30;
+  padding: 30px;
   flex: 1;
   min-width: 0;
   overflow: hidden;
