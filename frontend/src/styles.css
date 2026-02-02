@@ -307,74 +307,6 @@ textarea:focus {
   background: #0d0d0d;
 }
 
-.recommendation-card {
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.recommendation-card h3 {
-  color: #000000;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  letter-spacing: -0.3px;
-}
-
-.therapist-info {
-  padding: 1.5rem;
-  border-radius: 16px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.therapist-info h4 {
-  color: #736868;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
-}
-
-.match-score {
-  color: #000000;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.reasoning-section,
-.next-steps-section {
-  margin-bottom: 1.5rem;
-  padding: 1.25rem;
-}
-
-.reasoning-section h5,
-.next-steps-section h5 {
-  color: #1a1a1a;
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-}
-
-.reasoning-section p {
-  color: #736868;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.next-steps-section ul {
-  margin: 0;
-  padding-left: 1.5rem;
-}
-
-.next-steps-section li {
-  color: #736868;
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-}
-
 /* Confirmation Overview Styles */
 .confirmation-overview {
   margin-top: 1.75rem;
@@ -425,7 +357,6 @@ textarea:focus {
   letter-spacing: 0px;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader-container {
   display: flex;
   justify-content: center;
