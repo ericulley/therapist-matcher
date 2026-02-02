@@ -94,6 +94,12 @@ document.addEventListener("alpine:init", () => {
       },
       async submitQuestionaire(event) {
         this.page = 8;
+        this.loadingPhase = 1;
+
+        setTimeout(() => {
+          this.loadingPhase = 2;
+        }, 2000);
+
         // URL format: https://{API_ID}.execute-api.us-west-2.amazonaws.com/prod/questionnaire
         const apiUrl = API_GATEWAY_URL;
         const responseDiv = document.getElementById("response-message");

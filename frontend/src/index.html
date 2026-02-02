@@ -321,10 +321,15 @@
             </div>
           </div>
         </section>
-        <!-- Page 8: Match Results -->
+        <!-- Page 8: Loader -->
         <section x-show="page === 8" class="page width-80">
           <div class="loader-container">
-          <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loading-text">
+              <p x-show="loadingPhase === 1">Getting to know your needs…</p>
+              <p x-show="loadingPhase === 2">Finding your best therapist match...</p>
+            </div>
+          </div>
         </section>
         <!-- Page Navigation -->
         <div id="page-nav" class="width-80">

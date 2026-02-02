@@ -359,9 +359,9 @@ textarea:focus {
 
 .loader-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4rem;
   height: 50vh;
 }
 
@@ -411,6 +411,21 @@ textarea:focus {
       calc(3 * 100% / 4) 0,
       calc(4 * 100% / 4) 0;
   }
+}
+
+.loading-text {
+  height: 1.5rem; /* prevents layout shift when text changes */
+  position: relative;
+}
+
+.loading-text p {
+  color: #736868;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  position: absolute; makes phrases stack in same spot
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 /* Range Slider Styles */
