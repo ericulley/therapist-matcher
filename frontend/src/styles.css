@@ -413,6 +413,12 @@ textarea:focus {
   }
 }
 
+#loader-phrase {
+  color: #736868;
+  font-size: 1.5rem;
+  margin: 3rem;
+}
+
 /* Range Slider Styles */
 input[type="range"] {
   width: 100%;
