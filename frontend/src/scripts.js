@@ -123,18 +123,18 @@ document.addEventListener("alpine:init", () => {
             body: JSON.stringify(data),
           });
 
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-          } else {
+          if (response.ok) {
             this.isLoading = false;
+          } else {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
           }
 
           const result = await response.json();
           console.log("Response from lambda:", result);
 
           const profileUrl = result.therapistRecommendation.therapistProfile;
-          await this.timeoutInSeconds(this.loaderDelay);
           if (profileUrl) {
+            await this.timeoutInSeconds(this.loaderDelay);
             window.location.href = profileUrl;
           } else {
             throw new Error("Therapist profile URL could not be parsed.");
