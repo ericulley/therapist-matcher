@@ -6,6 +6,7 @@
     <link rel="icon" href="https://frogpointtherapy.com/wp-content/uploads/2021/04/cropped-fpt-favicon-32x32.jpg" sizes="32x32" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"></script>
+    <script src="constants.js"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/nor3exn.css" />
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;600&family=Arvo:wght@400;700&display=swap" rel="stylesheet" />
@@ -324,7 +325,8 @@
         <!-- Page 8: Loader -->
         <section x-show="page === 8" class="page width-80">
           <div class="loader-container">
-            <div class="loader"></div>
+            <div class="loader-animation"></div>
+            <div id="loader-phrase"></div>
           </div>
         </section>
         <!-- Page Navigation -->
