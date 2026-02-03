@@ -365,7 +365,7 @@ textarea:focus {
   height: 40vh;
 }
 
-.loader {
+.loader-animation {
   height: 2px;
   width: 200px;
   --c: no-repeat linear-gradient(#000 0 0);
