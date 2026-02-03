@@ -307,91 +307,6 @@ textarea:focus {
   background: #0d0d0d;
 }
 
-.response-message {
-  margin-top: 1rem;
-  padding: 2rem;
-  text-align: center;
-}
-
-.response-message.hidden {
-  display: none;
-}
-
-.response-message.error {
-  background: rgba(248, 215, 218, 0.7);
-  color: #721c24;
-  border: 1px solid rgba(245, 198, 203, 0.5);
-  box-shadow: 0 4px 20px rgba(114, 28, 36, 0.1);
-}
-
-.recommendation-card {
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.recommendation-card h3 {
-  color: #000000;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  letter-spacing: -0.3px;
-}
-
-.therapist-info {
-  padding: 1.5rem;
-  border-radius: 16px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.therapist-info h4 {
-  color: #736868;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
-}
-
-.match-score {
-  color: #000000;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.reasoning-section,
-.next-steps-section {
-  margin-bottom: 1.5rem;
-  padding: 1.25rem;
-}
-
-.reasoning-section h5,
-.next-steps-section h5 {
-  color: #1a1a1a;
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-}
-
-.reasoning-section p {
-  color: #736868;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.next-steps-section ul {
-  margin: 0;
-  padding-left: 1.5rem;
-}
-
-.next-steps-section li {
-  color: #736868;
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-}
-
 /* Confirmation Overview Styles */
 .confirmation-overview {
   margin-top: 1.75rem;
@@ -440,6 +355,62 @@ textarea:focus {
   line-height: 1.5;
   font-size: 1.1rem;
   letter-spacing: 0px;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.loader {
+  height: 2px;
+  width: 200px;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 21% 100%;
+  animation: l7 1s infinite alternate;
+}
+@keyframes l7 {
+  0%,
+  20% {
+    background-position:
+      calc(0 * 100% / 4) 0,
+      calc(1 * 100% / 4) 0,
+      calc(2 * 100% / 4) 0,
+      calc(3 * 100% / 4) 0;
+  }
+  35% {
+    background-position:
+      calc(0 * 100% / 4) 0,
+      calc(1 * 100% / 4) 0,
+      calc(2 * 100% / 4) 0,
+      calc(4 * 100% / 4) 0;
+  }
+  50% {
+    background-position:
+      calc(0 * 100% / 4) 0,
+      calc(1 * 100% / 4) 0,
+      calc(3 * 100% / 4) 0,
+      calc(4 * 100% / 4) 0;
+  }
+  65% {
+    background-position:
+      calc(0 * 100% / 4) 0,
+      calc(2 * 100% / 4) 0,
+      calc(3 * 100% / 4) 0,
+      calc(4 * 100% / 4) 0;
+  }
+  80%,
+  100% {
+    background-position:
+      calc(1 * 100% / 4) 0,
+      calc(2 * 100% / 4) 0,
+      calc(3 * 100% / 4) 0,
+      calc(4 * 100% / 4) 0;
+  }
 }
 
 /* Range Slider Styles */

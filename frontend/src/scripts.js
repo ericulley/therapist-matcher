@@ -93,6 +93,8 @@ document.addEventListener("alpine:init", () => {
         }
       },
       async submitQuestionaire(event) {
+        this.page = 8;
+
         // URL format: https://{API_ID}.execute-api.us-west-2.amazonaws.com/prod/questionnaire
         const apiUrl = API_GATEWAY_URL;
         const responseDiv = document.getElementById("response-message");
@@ -143,7 +145,6 @@ document.addEventListener("alpine:init", () => {
             responseDiv.textContent = "Recommendation received but format was unexpected.";
           }
           responseDiv.className = "response-message success";
-          this.page = 8;
         } catch (error) {
           if (error instanceof Error) {
             console.error("Error submitting questionnaire:", error);
