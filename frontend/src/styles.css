@@ -362,12 +362,12 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 40vh;
 }
 
 .loader {
-  height: 3px;
-  width: 75px;
+  height: 2px;
+  width: 200px;
   --c: no-repeat linear-gradient(#000 0 0);
   background: var(--c), var(--c), var(--c), var(--c);
   background-size: 21% 100%;
