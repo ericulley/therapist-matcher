@@ -114,6 +114,7 @@ document.addEventListener("alpine:init", () => {
           console.log("Submitting questionnaire data:", data);
           this.startLoader();
 
+          // Send questionnaire data in request to backend API
           const response = await fetch(API_GATEWAY_URL, {
             method: "POST",
             headers: {
@@ -129,9 +130,11 @@ document.addEventListener("alpine:init", () => {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
           }
 
+          // Parse response from the backend
           const result = await response.json();
           console.log("Response from lambda:", result);
 
+          // Redirect to therapist profile
           const profileUrl = result.therapistRecommendation.therapistProfile;
           if (profileUrl) {
             await this.timeoutInSeconds(this.loaderDelay);
