@@ -55,10 +55,6 @@ button:active {
   transform: translateY(0);
 }
 
-a {
-  color: #000000;
-}
-
 /* Nav styles */
 nav {
   display: flex;
