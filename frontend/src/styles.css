@@ -15,6 +15,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   font-family: "futura-pt", sans-serif;
+  color: #736868;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
 }
 
 h1 {
@@ -24,7 +31,6 @@ h1 {
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.5px;
-  font-family: "futura-pt", sans-serif;
 }
 
 h2 {
@@ -164,7 +170,6 @@ main {
   margin-bottom: 0.5rem;
   font-size: 2rem;
   font-weight: 600;
-  font-family: "futura-pt", sans-serif;
   text-align: left;
   border-bottom: 1px solid #736868;
   padding-bottom: 0.5rem;
@@ -182,7 +187,6 @@ main {
 
 .intro-page p {
   font-family: "Arvo", serif;
-  color: #736868;
   font-size: 1rem;
   line-height: 1.2;
   font-weight: 100;
@@ -200,7 +204,6 @@ label {
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #736868;
   letter-spacing: -0.2px;
 }
 
@@ -216,7 +219,6 @@ textarea {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1rem;
   color: #736868;
-  font-family: "Futura PT";
   background: transparent;
 }
 
@@ -318,7 +320,6 @@ textarea:focus {
 
 .text-centered {
   text-align: center;
-  color: #736868;
   font-size: 1.25rem;
   letter-spacing: 0px;
   margin-bottom: 4rem;
@@ -341,7 +342,6 @@ textarea:focus {
 
 .confirmation-item span,
 .confirmation-item p {
-  color: #736868;
   line-height: 1.5;
   font-size: 1.1rem;
   letter-spacing: 0px;
@@ -465,7 +465,6 @@ input[type="range"]::-moz-range-thumb:hover {
 .slider-labels {
   display: flex;
   justify-content: space-between;
-  color: #4a4a4a;
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
