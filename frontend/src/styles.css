@@ -267,6 +267,7 @@ textarea:focus {
   -webkit-appearance: none;
   background: transparent;
   border: 1px solid #736868;
+  flex-shrink: 0;
 }
 /* Checkbox square  */
 .checkbox-label input {
