@@ -94,10 +94,6 @@ nav {
   justify-content: space-between;
 }
 
-#page-nav.intro-only {
-  justify-content: right;
-}
-
 #intro-right button {
   font-size: 12px;
   letter-spacing: 3;
