@@ -100,6 +100,8 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: 3rem;
+  color: #0d0d0d;
+  border-bottom: #0d0d0d 1px solid;
 }
 
 /* Main and Section styles */
@@ -137,7 +139,7 @@ main {
 
 #intro-left {
   background-color: transparent;
-  /* padding: 30px; */
+  padding: 30px;
   flex: 1;
   min-width: 0;
   overflow: hidden;
