@@ -98,8 +98,9 @@ nav {
   font-size: 12px;
   letter-spacing: 3;
   display: block;
-  margin-left: auto;
-  margin-right: 3rem;
+  margin: 2rem 3rem 0 auto;
+  color: #0d0d0d;
+  border-color: #0d0d0d;
 }
 
 /* Main and Section styles */
