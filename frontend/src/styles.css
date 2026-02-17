@@ -100,7 +100,7 @@ nav {
   display: block;
   margin: 2rem 3rem 0 auto;
   color: #0d0d0d;
-  border-bottom: #0d0d0d 1px solid;
+  border-color: #0d0d0d;
 }
 
 /* Main and Section styles */
