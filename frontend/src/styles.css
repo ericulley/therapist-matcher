@@ -217,6 +217,7 @@ textarea {
   font-size: 1rem;
   color: #736868;
   background: transparent;
+  font-family: "futura-pt", sans-serif;
 }
 
 input[type="text"]:focus,
