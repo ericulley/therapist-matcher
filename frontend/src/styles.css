@@ -187,12 +187,8 @@ main {
   font-family: "Arvo", serif;
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 100;
 }
 
-.intro-page p strong {
-  font-weight: 700;
-}
 .question-group {
   margin-bottom: 2rem;
 }
