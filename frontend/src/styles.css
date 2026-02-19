@@ -189,6 +189,9 @@ main {
   font-weight: 100;
 }
 
+.intro-page p strong {
+  font-weight: 700;
+}
 .question-group {
   margin-bottom: 2rem;
 }
