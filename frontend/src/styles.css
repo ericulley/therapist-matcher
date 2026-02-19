@@ -99,8 +99,9 @@ nav {
   letter-spacing: 3;
   display: block;
   margin: 2rem 3rem 0 auto;
-  color: #0d0d0d;
-  border-color: #0d0d0d;
+  color: #404040;
+  border-color: #404040;
+  font-weight: 900;
 }
 
 /* Main and Section styles */
@@ -186,7 +187,6 @@ main {
   font-family: "Arvo", serif;
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 100;
 }
 
 .question-group {
